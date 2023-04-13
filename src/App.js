@@ -1,11 +1,21 @@
-import UilReact from "@iconscout/react-unicons/icons/uil-react";
+import TopButtons from "./Components/TopButtons";
+import Inputs from "./Components/Inputs";
+import TimeAndLocation from "./Components/TimeAndLocation";
+import TemperatureAndDetails from "./Components/TemperatureAndDetails";
+import Forcast from "./Components/Forcast";
+
 function App() {
   return (
-    <div>
-      <h1 className=" text-2xl text-red-500 text-center"> Hello World!</h1>
+    <main className="mx-auto my-4  py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 shadow-xl shadow-gray-400 max-w-screen-md h-fit">
+      <TopButtons />
+      <Inputs />
 
-      <UilReact size={100} />
-    </div>
+      <TimeAndLocation />
+      <TemperatureAndDetails />
+
+      <Forcast title={"Hourly Forcast"} />
+      <Forcast title={"Daily Forcast"} />
+    </main>
   );
 }
 
