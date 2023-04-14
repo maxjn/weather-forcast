@@ -34,4 +34,4 @@ npm run start
 
 ###### Image
 
-![Index page](public\weather-forcast-cover.png)
+![Cover](./public/weather-forcast-cover.png)
