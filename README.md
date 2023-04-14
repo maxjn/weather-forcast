@@ -1,23 +1,28 @@
 ### Weather Forcast React App :)
 
+Weather Forcast app using **React** and **OpenWeather** API.
+
+See the [Live Project](https://weather-forcast.pages.dev/).
+
 ###### Technologies
 
 - HTML,Tailwindcss
 - ES6
 - React
-- custome Hooks
 - useState & useEffects Hooks
 - Uicons
+- **Luxon** package for time transfering
+- **Toastify** package for toast messages
 
 ###### Features
 
 Showing Weather:
 
-- Based on location
-- Based on search results
-- In F/C
-- In hours
-- In the week
+- based on location
+- based on search results
+- in °F/°C
+- hourly forcast
+- daily forcast
 
 ## Installing / Getting started
 
@@ -29,4 +34,4 @@ npm run start
 
 ###### Image
 
-![Index page](public/index.png)
+![Index page](public\weather-forcast-cover.png)
