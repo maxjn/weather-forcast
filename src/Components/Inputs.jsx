@@ -48,6 +48,11 @@ function Inputs({ setQuery, units, setUnits }) {
             onChange={(e) => {
               setCity(e.target.value);
             }}
+            onKeyUp={(e) => {
+              if (e.key === "Enter") {
+                handleSearchClick();
+              }
+            }}
           />
           <UilSearch
             size={25}

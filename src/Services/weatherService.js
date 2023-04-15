@@ -2,6 +2,7 @@
 // URL API https://developer.mozilla.org/en-US/docs/Web/API/URL
 
 import { DateTime } from "luxon";
+import cityTimezones from "city-timezones";
 
 const Base_URL = "https://api.openweathermap.org/data/2.5/";
 const API_Key = "75952e59afb719452c04df0af08a8e01";
@@ -50,10 +51,10 @@ const formatCurrentWeatherData = (data) => {
 //Gets the weather data and format it for display
 const formatForcastWeatherData = (data) => {
   const {
-    city: { timezone },
+    city: { name },
     list,
   } = data;
-
+  const timezone = cityTimezones.lookupViaCity(name)[0].timezone;
   let daily = [];
   let hourly = list.slice(0, 5);
 
@@ -109,9 +110,9 @@ const getFormatedWeatherData = async (searchParams) => {
 //format time to Local Time using Luxon
 const formatToLocalTime = (
   secs,
-  zone,
+  zoneName,
   format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
-) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
+) => DateTime.fromSeconds(secs).setZone(zoneName).toFormat(format);
 
 //format time to Local Time using Luxon
 const iconUrlFromCode = (code) =>
