@@ -1,6 +1,12 @@
 import React from "react";
+import cityTimezones from "city-timezones";
+
 import { formatToLocalTime } from "../Services/weatherService";
-function TimeAndLocation({ weather: { dt, timezone, name, country } }) {
+function TimeAndLocation({ weather: { dt, name, country } }) {
+  const timezone = cityTimezones.lookupViaCity(name)[0].timezone;
+
+  // console.log(rightZone);
+
   return (
     <>
       <section id="time_and_location">

@@ -1,5 +1,8 @@
 import React from "react";
 import { formatToLocalTime, iconUrlFromCode } from "../Services/weatherService";
+import cityTimezones from "city-timezones";
+
+// import cityTimezones from "cityTimezone";
 
 import {
   UilArrowUp,
@@ -23,9 +26,11 @@ function TemperatureAndDetails({
     speed,
     humidity,
     feels_like,
-    timezone,
+    name,
   },
 }) {
+  const timezone = cityTimezones.lookupViaCity(name)[0].timezone;
+
   return (
     <>
       <section id="temperature_and_details">

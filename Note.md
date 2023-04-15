@@ -12,3 +12,9 @@
 - added toasts using 'toastify' package
 - added cover image
 - updated Readme.md
+
+# Fixes (#3):
+
+- fixed timezone problem
+- added search with Enter to the search input field
+- changed cover size

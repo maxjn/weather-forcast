@@ -13,6 +13,7 @@ See the [Live Project](https://weather-forcast.pages.dev/).
 - Uicons
 - **Luxon** package for time transfering
 - **Toastify** package for toast messages
+- **City-Timezone** package for getting the time zone name
 
 ###### Features
 
