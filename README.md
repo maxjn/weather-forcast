@@ -2,7 +2,7 @@
 
 Weather Forcast app using **React** and **OpenWeather** API.
 
-See the [Live Project](https://weather-forcast.pages.dev/).
+See the [Live Project](https://maxjn-weather-forcast.pages.dev/).
 
 ###### Technologies
 
